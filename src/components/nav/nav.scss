@@ -1,0 +1,22 @@
+.nav {
+    position: absolute;
+    top:0;
+    height: 80vh;
+    width: 20vw;
+    padding-top:20vh;
+    background-color: bisque;
+    &--hide {
+        left: -20vw;
+    }
+    &--show {
+        left: 0;
+    }
+
+    & img {
+    position: absolute;
+    top:0;
+    cursor: pointer;
+    height: 40px;
+    margin: 30px;
+    }
+}
