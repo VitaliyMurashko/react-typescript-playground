@@ -1,18 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './nav.scss';
-import img from '../../img/list.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars} from '@fortawesome/free-solid-svg-icons'
 
-const Nav: React.FC<any> = () => {
+const Nav = () => {
+    const [isOpen, setIsOpen] = useState(false)
     return (
-        <nav className="nav nav--show">
-            <img src={img} alt=""/>
+        <>
+        <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setIsOpen(!isOpen)}/>
+        <nav className={isOpen ? "nav nav--show" : "nav nav--hide"}>
             <ul>
-                <li><a href="/"></a>1</li>
-                <li><a href="/"></a>2</li>
-                <li><a href="/"></a>3</li>
-                <li><a href="/"></a>4</li>
+                <li><a href="/">Calculator</a></li>
+                <li><a href="/">2</a></li>
+                <li><a href="/">3</a></li>
+                <li><a href="/">4</a></li>
             </ul>
         </nav>
+        </>
     )
 }
 

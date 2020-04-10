@@ -9,7 +9,12 @@ type DisplayType = {
     dis:any
 }
 
-const CalcButton: React.SFC<DisplayType & buttonType> = ({id, value, display, type, order,setEq,setDisplay,eq,dis}) => {
+type BackgroundType = {
+    background:Array<string>,
+    setBackground:(payload:Array<string>) => void
+}
+
+const CalcButton: React.SFC<DisplayType & buttonType & BackgroundType> = ({id, value, display, type, order,setEq, setDisplay, dis, background, setBackground}) => {
 
     const clickEvent = (e:SyntheticEvent):void => {
         const target = e.target as HTMLButtonElement
@@ -19,11 +24,14 @@ const CalcButton: React.SFC<DisplayType & buttonType> = ({id, value, display, ty
                     setDisplay(dis + target.value);
                 break;
             case 'OPERATION':
-                setDisplay(dis + target.value);
+                dis.substr(-1).match(/[+\-*/]/) ?
+                setDisplay(dis) :
+                setDisplay(dis + target.value)
                 break;
             case 'CLEAR':
                 setDisplay('');
-                setEq('')
+                setEq('');
+                setBackground([]);
                 break;
             case 'BRACKET':
                 setDisplay(dis + target.value);
@@ -35,8 +43,13 @@ const CalcButton: React.SFC<DisplayType & buttonType> = ({id, value, display, ty
                 setDisplay(target.value);
                 break;
             case 'EQUAL':
+                if(dis.substr(-1).match(/[+\-*/.]/)){
+                    setDisplay(dis)
+                } else {
                 setEq(dis + target.value)
-                setDisplay(eval(dis));
+                setDisplay(`${eval(dis)}`);
+                setBackground([...background, `${dis + target.value}${eval(dis)}`])
+                }
                 break;        
             default:
                 setDisplay('ERROR')                    
