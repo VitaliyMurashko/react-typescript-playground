@@ -4,3 +4,24 @@
   height: 100vh;
 }
 
+@dark-shadow : #272626
+@light-shadow :
+
+.light {
+  background-color: #e9e9e9 !important;
+  color:rgba(33, 36, 29, 0.568) !important;
+}
+
+.dark {
+  background-color: #121212 !important;
+  color: rgba(255, 255, 255, 0.69) !important; 
+}
+
+.shadow {
+  box-shadow: 7px 7px 9px #272626, -7px -7px 9px #272626 !important;
+}
+
+.inset-shadow {
+  box-shadow:inset 7px 7px 9px #272626,inset -7px -7px 9px #272626 !important;
+}
+
