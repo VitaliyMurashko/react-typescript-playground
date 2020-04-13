@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './nav.scss';
+import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars} from '@fortawesome/free-solid-svg-icons'
 
@@ -10,9 +11,9 @@ const Nav = () => {
         <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setIsOpen(!isOpen)}/>
         <nav className={isOpen ? "nav nav--show" : "nav nav--hide"}>
             <ul>
-                <li><a href="/">Calculator</a></li>
-                <li><a href="/">2</a></li>
-                <li><a href="/">3</a></li>
+                <li><Link to="/calculator">Calculator</Link></li>
+                <li><Link to="/name-search">Name search</Link></li>
+                <li><Link to="/GitHub-card">GutHub card</Link></li>
                 <li><a href="/">4</a></li>
             </ul>
         </nav>

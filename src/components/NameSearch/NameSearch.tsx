@@ -4,7 +4,7 @@ import Container from '../Container/Container'
 
 const NameSearch :FunctionComponent = () => {
     return(
-    <Container BgColor="lavender">
+    <Container BgColor="honeydew">
         <input type="text"></input>
     </Container>
     )
