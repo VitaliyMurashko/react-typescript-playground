@@ -1,0 +1,38 @@
+.card {
+    height: 450px;
+
+    &__profile {
+    text-align: center;
+
+    & img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        background-position: 50% 50%;
+        box-shadow: 2px 2px 1px #bababa, -2px -2px 1px #ffffff;
+    }
+}
+    & h2 {
+        color:darkgray;
+    }
+
+    &__state {
+        display: flex;
+        box-shadow: 2px 2px 1px #bababa, -2px -2px 1px #ffffff;
+    border-radius: 15px;
+        & div {
+            margin: 20px;
+            text-align: center;
+        }
+
+        & h3 {
+            font-size: 1.3em;
+            color: darkcyan;
+        }
+
+        & span {
+            color: #757171;
+            font-size: 0.9em;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.card__input {
+
+    & input {
+        color: rgba(33, 36, 29, 0.568);
+        width: 310px;
+        height: 40px;
+        margin-bottom: 20px;
+        background: transparent;
+        border: none;
+        font-size: 1.1em;
+        text-align: center;
+        border-bottom: 1px solid #9e9e9e;
+        outline: none;
+
+        &:focus {
+            border-bottom: 2px solid #5cb873;
+        }
+    }
+
+    & label {
+        color: #8c8989;
+        font-size: 0.9em;
+    }
+
+}

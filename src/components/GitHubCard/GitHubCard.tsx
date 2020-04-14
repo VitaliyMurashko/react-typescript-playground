@@ -5,13 +5,13 @@ import {CardProfile} from './CardProfile/CardProfile';
 import CardForm from './CardForm/CardForm'
 
 const GitHubCard = () => {
-    const [name, setName] = useState<string>('');
-    console.log('render')
+    const [name, setName] = useState<string>('VitaliyMurashko');
+
     return (
         <Container BgColor="beige">
             <div className="card">
                 <CardForm setName={setName}/>
-                <CardProfile name={name}/>
+               {name ? <CardProfile name={name}/> : <div>enter please name</div>} 
             </div>
         </Container>   
     )
