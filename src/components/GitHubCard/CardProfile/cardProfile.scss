@@ -35,4 +35,16 @@
             font-size: 0.9em;
         }
     }
+
+    &__date {
+        color: #5d5d5d;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+
+        & span {
+            padding-bottom: 5px;
+        }
+    }
 }

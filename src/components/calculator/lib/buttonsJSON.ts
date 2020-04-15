@@ -56,10 +56,10 @@ export const buttonsJson = [
         "order": 3
     },
     {
-        "id": "percent",
-        "value": "%",
-        "display": "%",
-        "type": "PERCENT",
+        "id": "delete",
+        "value": " ",
+        "display": "←",
+        "type": "DELETE",
         "order": 4
     },
     {

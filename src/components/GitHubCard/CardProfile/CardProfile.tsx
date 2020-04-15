@@ -47,8 +47,11 @@ export const CardProfile: FunctionComponent<any> = ({ name }) => {
                 </div>
                 
             </div>
-            <span><strong>account created:</strong>{data.created_at.slice(0,10)}</span>
-            <span><strong>account created:</strong>{data.updated_at}</span>
+            <div className="card__date">
+                <span><strong>account created:</strong>{data.created_at.slice(0,10)}</span>
+                <span><strong>account last update:</strong>{data.updated_at.slice(0,10)}</span>
+            </div>
+            
         </>
     )
 } 
