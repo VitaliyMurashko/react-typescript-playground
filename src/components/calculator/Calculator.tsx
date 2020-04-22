@@ -1,26 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState,FunctionComponent} from 'react';
 import './calculator.scss';
 import './CalcButton/Button';
 import CalcButton from './CalcButton/Button';
 import {buttonType} from './CalculatorTypes';
 import {buttonsJson} from './lib/buttonsJSON';
 
-const Calculator = () => {
+
+const Calculator:FunctionComponent<any> = ({background, setBackground}) => {
+    
 const [eq, setEq] = useState('');
 const [display, setDisplay] = useState('');
-const [background, setBackground] = useState(['12+4=16', '5/1=5', '11-1=10'])
 
 const buttons:Array<buttonType> = buttonsJson;
 
     return (
-        <div className="container">
-            {background.map((item) =><p className='background' style={{
-                top:`${Math.random()*60}vh`, 
-                left:`${Math.random()*60}vw`, 
-                transform:`rotate(${Math.random()*360}deg)`,
-                fontSize:`${Math.random()*10}em` 
-                }}>{item}</p> )}
-            
+        <>  
             <div className="calculator">
                 <div className="calculator__display">
                     <span className="calculator__eq"> 
@@ -37,7 +31,7 @@ const buttons:Array<buttonType> = buttonsJson;
                 background={background} setBackground={setBackground}     
                 />)}
             </div>
-        </div>
+        </>
     )
 }
 

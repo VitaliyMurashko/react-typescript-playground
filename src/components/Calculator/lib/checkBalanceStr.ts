@@ -10,7 +10,7 @@ export const checkBalanceStr = (str:string) => {
                 if (i > -1) stack.push(close[i]);
                 if (i > -1 && index !==i) index = i;
                 if (index + 1 === i) return false;
-                if (close.includes(symbol) && symbol != stack.pop()) return false
+                if (close.includes(symbol) && symbol !== stack.pop()) return false
             }
-            return stack.length == 0;
+            return stack.length === 0;
 }

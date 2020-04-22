@@ -14,7 +14,7 @@ const Nav = () => {
                 <li><Link to="/calculator">Calculator</Link></li>
                 <li><Link to="/name-search">Name search</Link></li>
                 <li><Link to="/GitHub-card">GutHub card</Link></li>
-                <li><a href="/">4</a></li>
+                <li><Link to="/Tic-tac-toe">Tic tac toe</Link></li>
             </ul>
         </nav>
         </>

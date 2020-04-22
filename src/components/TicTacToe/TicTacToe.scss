@@ -1,0 +1,61 @@
+.TicTac {
+    background-color: #e9e9e9;
+    height: 400px;
+    width: 320px;
+    padding: 20px;
+    box-shadow: 7px 7px 5px #bababa, -7px -7px 5px #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color:rgba(33, 36, 29, 0.568);
+
+
+    &__square {
+        
+        border: 1px solid #999;
+        float: left;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 34px;
+        height: 100px;
+        margin-right: -1px;
+        margin-top: -1px;
+        padding: 0;
+        text-align: center;
+        width: 100px;
+        color:#3c3c3c;
+      }
+      
+    &__square:focus {
+        outline: none;
+      }
+
+    &__board-row:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+
+    &__restartBtn {
+            font-size: 20px;
+            padding: 10px 20px;
+            list-style: none;
+            margin: 20px 0;
+            box-shadow: 2px 2px 1px #bababa, -2px -2px 1px #ffffff;
+            border-radius: 10px;
+            border: 0;
+            color:rgba(33, 36, 29, 0.568);
+
+            &:active {
+                box-shadow: inset 7px 7px 9px #bababa,
+                    inset -7px -7px 9px #ffffff;
+            }
+    }  
+      
+}
+
+.status {
+    margin-bottom: 20px;
+}

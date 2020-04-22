@@ -1,21 +1,21 @@
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: aliceblue;
-    overflow: hidden;
+// .container {
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: aliceblue;
+//     overflow: hidden;
 
-    & p {
-        margin: 0;
-        position: absolute;
-        opacity: 0.2;
-        font-size: 2.5em;
-        font-weight: 800;
-        z-index: 0;
-    }
-}
+//     & p {
+//         margin: 0;
+//         position: absolute;
+//         opacity: 0.2;
+//         font-size: 2.5em;
+//         font-weight: 800;
+//         z-index: 0;
+//     }
+// }
 
 .calculator {
     display: flex;

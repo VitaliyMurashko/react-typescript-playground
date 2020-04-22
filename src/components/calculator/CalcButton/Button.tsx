@@ -6,8 +6,8 @@ import {checkBalanceStr} from '../lib/checkBalanceStr'
 type DisplayType = {
     setEq: (payload: any) => void
     setDisplay: (payload: any) => void
-    eq: any
-    dis: any
+    eq: string
+    dis: string
 }
 
 type BackgroundType = {
@@ -15,7 +15,7 @@ type BackgroundType = {
     setBackground: (payload: Array<string>) => void
 }
 
-const CalcButton: React.SFC<DisplayType & buttonType & BackgroundType> = ({ id, value, display, type, order, setEq, setDisplay, dis, background, setBackground }) => {
+const CalcButton: React.SFC<DisplayType & buttonType & BackgroundType> = ({ id, value, display, type, order, setEq, setDisplay, dis,eq, background, setBackground }) => {
 
     const clickEvent = (e: SyntheticEvent): void => {
         const target = e.target as HTMLButtonElement
@@ -46,14 +46,15 @@ const CalcButton: React.SFC<DisplayType & buttonType & BackgroundType> = ({ id, 
                 setDisplay(dis.slice(0, (dis.length - 1)));
                 break;
             case 'EQUAL':
-                if (dis.substr(-1).match(/[+\-*/]/)) {
+                if (dis.substr(-1).match(/[+\-*/\.]/)) {
                     setDisplay(dis)
                 } else {
                     if(checkBalanceStr(dis) && dis.match(/[0-9]/)){
-                    setEq(dis + target.value)
+                    setEq(dis + target.value);
                     setDisplay(`${eval(dis)}`);
-                    setBackground([...background, `${dis + target.value}${eval(dis)}`])
+                    setBackground([...background, `${dis + target.value}${eval(dis)}`]);
                     }else {
+                        setEq('error')
                         setDisplay('')
                     }  
                 }
