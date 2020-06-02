@@ -12,7 +12,7 @@ const Nav = () => {
         <nav className={isOpen ? "nav nav--show" : "nav nav--hide"}>
             <ul>
                 <li><Link to="/calculator">Calculator</Link></li>
-                <li><Link to="/name-search">Name search</Link></li>
+                <li><Link to="/tests">Tests</Link></li>
                 <li><Link to="/GitHub-card">GutHub card</Link></li>
                 <li><Link to="/Tic-tac-toe">Tic tac toe</Link></li>
             </ul>

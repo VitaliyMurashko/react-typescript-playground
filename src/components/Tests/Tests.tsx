@@ -1,8 +1,7 @@
-import React, {FunctionComponent} from 'react';
-import {namesJson} from './names';
+import React from 'react';
 import Container from '../Container/Container'
 
-const NameSearch :FunctionComponent = () => {
+const Tests  = () => {
     return(
     <Container BgColor="honeydew">
         <input type="text"></input>
@@ -10,4 +9,4 @@ const NameSearch :FunctionComponent = () => {
     )
 }
 
-export default NameSearch
+export default Tests
