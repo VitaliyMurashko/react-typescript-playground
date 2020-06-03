@@ -1,12 +1,12 @@
 import React from 'react';
 import Container from '../Container/Container'
 
-const Tests  = () => {
+const Keyboard  = () => {
     return(
     <Container BgColor="honeydew">
-        <input type="text"></input>
+        
     </Container>
     )
 }
 
-export default Tests
+export default Keyboard
