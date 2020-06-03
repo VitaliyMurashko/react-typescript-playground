@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useEffect,useState} from 'react';
 import styled from 'styled-components';
 import Key from './Key';
 import {Buttons} from './Buttons';
@@ -17,9 +17,18 @@ padding:1vw;
 
 const KeyboardBase = () => {
 
+    const [key, setkey] = useState('')
+
+    console.log(key);
+    useEffect(()=> {
+        document.addEventListener('keydown', (e) => setkey(e.key));
+
+        return () => {document.removeEventListener('keydown', (e) => setkey(e.key))};
+    }, [])
+
     return (
         <Container>
-            {Buttons.map(button => <Key value={button.value} size={button.size}/>)}
+            {Buttons.map(button => <Key key={Math.random()*100} value={button.value} size={button.size} pressedKey={key} setkey={setkey}/>)}
         </Container>
     )
 }

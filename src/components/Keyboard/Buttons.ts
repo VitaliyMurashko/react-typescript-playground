@@ -52,7 +52,7 @@ export const Buttons = [
         size:2
     },
     {
-        value:'delete',
+        value:'Backspace',
         size:4
     },
     {
@@ -216,19 +216,19 @@ export const Buttons = [
         size:3
     },
     {
-        value:'cmnd',
+        value:'cmd',
         size:3
     },
     {
-        value:'alt',
+        value:'Alt',
         size:2
     },
     {
-        value:'space',
+        value:' ',
         size:13
     },
     {
-        value:'alt',
+        value:'Alt',
         size:2
     },
     {
@@ -236,7 +236,7 @@ export const Buttons = [
         size:2
     },
     {
-        value:'cmnd',
+        value:'cmd',
         size:3
     },
     {
