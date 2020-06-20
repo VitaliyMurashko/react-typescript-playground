@@ -8,7 +8,7 @@ type Custom = {
 
 const KeyInput = styled.div<Custom>`
 grid-column: span ${props => props.size};
-font-size:1.5vw;
+font-size:2vw;
 align-self: auto;
 text-align:center;
 background-color: floralwhite;
@@ -27,18 +27,19 @@ type buttonType = {
     setkey: (payload:any) => void
 }
 
-const Key: React.SFC<buttonType> = (props) => {
+const Key: React.SFC<buttonType> = ({value, size, pressedKey, setkey}) => {
     const [IsPressed, setIsPressed] = useState(false)
 
     useEffect(() => {
-        props.pressedKey === props.value && setIsPressed(true)
+        pressedKey === value && setIsPressed(true)
         setTimeout(() => {
             setIsPressed(false)
+            setkey('');
         }, 100)
-    }, [props.pressedKey, props.value])
+    }, [pressedKey, value])
 
     return (
-        <KeyInput size={props.size} IsPressed={IsPressed}>{props.value}</KeyInput>
+        <KeyInput size={size} IsPressed={IsPressed}>{value}</KeyInput>
     )
 }
 

@@ -1,7 +1,7 @@
-import React ,{useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Key from './Key';
-import {Buttons} from './Buttons';
+import { Buttons } from './Buttons';
 
 const Container = styled.div`
 display: grid;
@@ -15,20 +15,27 @@ border-radius: 5px;
 padding:1vw;
 `
 
+
+
 const KeyboardBase = () => {
 
     const [key, setkey] = useState('')
 
     console.log(key);
-    useEffect(()=> {
-        document.addEventListener('keydown', (e) => setkey(e.key));
-
-        return () => {document.removeEventListener('keydown', (e) => setkey(e.key))};
+    useEffect(() => {
+        document.addEventListener('keydown', (e) => {
+            setkey(e.key)
+        })
+        return () => {
+            document.removeEventListener('keydown', (e) => {
+                setkey(e.key) 
+            })
+        };
     }, [])
 
     return (
         <Container>
-            {Buttons.map(button => <Key key={Math.random()*100} value={button.value} size={button.size} pressedKey={key} setkey={setkey}/>)}
+            {Buttons.map(button => <Key key={Math.random() * 100} value={button.value} size={button.size} pressedKey={key} setkey={setkey} />)}
         </Container>
     )
 }
