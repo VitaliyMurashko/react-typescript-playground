@@ -1,5 +1,9 @@
+
 import React from 'react';
 import styled from 'styled-components';
+import {useText} from '../../context/KeyboardContext' 
+
+
 
 
 const Wrapper = styled.div`
@@ -16,17 +20,16 @@ const TextArea = styled.textarea`
     border:0;
     border-radius:5px;
     padding:20px;
-    font-size:1.2em;
+    font-size:1.4em;
+    letter-spacing:.08em;
+    color:#606563;
 `
-type textType = {
-    text:string;
-}
 
-const TextField:React.SFC<textType> = ({text}) => {
-
+const TextField:React.FC = () => {
+    const {text} = useText()!;
     return (
         <Wrapper>
-            <TextArea>{text}</TextArea>
+            <TextArea value={text} readOnly/>
         </Wrapper>
     )
 }

@@ -1,7 +1,10 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Key from './Key';
 import { Buttons } from './Buttons';
+import {useText} from '../../context/KeyboardContext' 
+import { setTextRange } from 'typescript';
 
 const Container = styled.div`
 display: grid;
@@ -16,15 +19,15 @@ padding:1vw;
 `
 
 
-
 const KeyboardBase = () => {
 
-    const [key, setkey] = useState('')
-
-    console.log(key);
+    const [key, setkey] = useState('');
+    const {setValue} = useText();
+    console.log(setValue)
     useEffect(() => {
         document.addEventListener('keydown', (e) => {
-            setkey(e.key)
+            setkey(e.key);
+            setValue( e.key );
         })
         return () => {
             document.removeEventListener('keydown', (e) => {

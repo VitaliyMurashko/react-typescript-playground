@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
@@ -27,7 +28,7 @@ type buttonType = {
     setkey: (payload:any) => void
 }
 
-const Key: React.SFC<buttonType> = ({value, size, pressedKey, setkey}) => {
+const Key: React.FC<buttonType> = ({value, size, pressedKey, setkey}) => {
     const [IsPressed, setIsPressed] = useState(false)
 
     useEffect(() => {
