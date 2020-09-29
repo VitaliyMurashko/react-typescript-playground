@@ -15,7 +15,7 @@ const Nav = () => {
                 <li><Link to="/keyboard">Keyboard</Link></li>
                 <li><Link to="/GitHub-card">GutHub card</Link></li>
                 <li><Link to="/Tic-tac-toe">Tic tac toe</Link></li>
-                <li><Link to="/Memory-game">Tic tac toe</Link></li>
+                <li><Link to="/Memory-game">Memory game</Link></li>
             </ul>
         </nav>
         </>

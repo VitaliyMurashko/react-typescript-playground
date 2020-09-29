@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Key from './Key';
 import { Buttons } from './Buttons';
 import {useText} from '../../context/KeyboardContext' 
-import { setTextRange } from 'typescript';
 
 const Container = styled.div`
 display: grid;
@@ -23,7 +22,6 @@ const KeyboardBase = () => {
 
     const [key, setkey] = useState('');
     const {setValue} = useText();
-    console.log(setValue)
     useEffect(() => {
         document.addEventListener('keydown', (e) => {
             setkey(e.key);
