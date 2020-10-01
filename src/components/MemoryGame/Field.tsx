@@ -19,14 +19,12 @@ padding:0.4vw;
 
 
 export const Field:React.FC  = ({shuffledTilesData}) => {
+
     const [clickCounter, setclickCounter] = useState(0);
-      
-    console.log(clickCounter);
-    
-    
 
     return (
         <Container>
+            {console.log('Field render')}
             {shuffledTilesData.map((TileData)=> <Tile key={TileData.id} color={TileData.color} value={TileData.value} icon={TileData.icon}
             clickCounter = {clickCounter} setclickCounter ={setclickCounter}
             />)}

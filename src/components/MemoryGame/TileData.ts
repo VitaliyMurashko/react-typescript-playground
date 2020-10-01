@@ -1,184 +1,284 @@
 // @ts-nocheck
+import { faAngry, faTired, faDizzy,
+    faFlushed, faGrinAlt, faGrinSquintTears,
+    faGrinTongueWink, faFrown, faGrimace,
+    faMeh, faMehBlank, faMehRollingEyes,
+    faSadCry, faSurprise, faSadTear,
+    faAppleAlt, faBreadSlice, faCandyCane,
+    faCarrot, faCheese, faCookie,
+    faDrumstickBite, faEgg, faHamburger,
+    faHotdog, faIceCream, faLemon,
+    faPepperHot, faPizzaSlice, faStroopwafel } from '@fortawesome/free-solid-svg-icons';
 export const TilesData = [
     {
         id:1,
-        color:'1',
+        color:'#75bd66',
         value:1,
-        icon:'1',
+        icon:{
+            emoji:faAngry,
+            food:faAppleAlt
+        },
     },
     {
         id:2,
-        color:'1',
+        color:'#75bd66',
         value:1,
-        icon:'1',
+        icon:{
+            emoji:faAngry,
+            food:faAppleAlt
+        },
     },
     {
         id:3,
-        color:'1',
+        color:'#009688',
         value:2,
-        icon:'1',
+        icon:{
+            emoji:faDizzy,
+            food:faBreadSlice
+        },
     },
     {
         id:4,
-        color:'1',
+        color:'#009688',
         value:2,
-        icon:'1',
+        icon:{
+            emoji:faDizzy,
+            food:faBreadSlice
+        },
     },
     {
         id:5,
-        color:'1',
+        color:'#607d8b',
         value:3,
-        icon:'1',
+        icon:{
+            emoji:faFlushed,
+            food:faCandyCane
+        },
     },
     {
         id:6,
-        color:'1',
+        color:'#607d8b',
         value:3,
-        icon:'1',
+        icon:{
+            emoji:faFlushed,
+            food:faCandyCane
+        },
     },
     {
         id:7,
-        color:'1',
+        color:'#ff5722',
         value:4,
-        icon:'1',
+        icon:{
+            emoji:faGrinAlt,
+            food:faCarrot
+        },
     },
     {
         id:8,
-        color:'1',
+        color:'#ff5722',
         value:4,
-        icon:'1',
+        icon:{
+            emoji:faGrinAlt,
+            food:faCarrot
+        },
     },
     {
         id:9,
-        color:'1',
+        color:'#ff9800',
         value:5,
-        icon:'1',
+        icon:{
+            emoji:faGrinSquintTears,
+            food:faCheese
+        },
     },
     {
         id:10,
-        color:'1',
+        color:'#ff9800',
         value:5,
-        icon:'1',
+        icon:{
+            emoji:faGrinSquintTears,
+            food:faCheese
+        },
     },
     {
         id:11,
-        color:'1',
+        color:'#3f51b5',
         value:6,
-        icon:'1',
+        icon:{
+            emoji:faGrinTongueWink,
+            food:faCookie
+        },
     },
     {
         id:12,
-        color:'1',
+        color:'#3f51b5',
         value:6,
-        icon:'1',
+        icon:{
+            emoji:faGrinTongueWink,
+            food:faCookie
+        },
     },
     {
         id:13,
-        color:'1',
+        color:'#e91e63',
         value:7,
-        icon:'1',
+        icon:{
+            emoji:faFrown,
+            food:faDrumstickBite
+        },
     },
     {
         id:14,
-        color:'1',
+        color:'#e91e63',
         value:7,
-        icon:'1',
+        icon:{
+            emoji:faFrown,
+            food:faDrumstickBite
+        },
     },
     {
         id:15,
-        color:'1',
+        color:'#9c27b0',
         value:8,
-        icon:'1',
+        icon:{
+            emoji:faGrimace,
+            food:faEgg
+        },
     },
     {
         id:16,
-        color:'1',
+        color:'#9c27b0',
         value:8,
-        icon:'1',
+        icon:{
+            emoji:faGrimace,
+            food:faEgg
+        },
     },
     {
         id:17,
-        color:'1',
+        color:'#9e9e9e',
         value:9,
-        icon:'1',
+        icon:{
+            emoji:faMeh,
+            food:faHamburger
+        },
     },
     {
         id:18,
-        color:'1',
+        color:'#9e9e9e',
         value:9,
-        icon:'1',
+        icon:{
+            emoji:faMeh,
+            food:faHamburger
+        },
     },
     {
         id:19,
-        color:'1',
+        color:'#795548',
         value:10,
-        icon:'1',
+        icon:{
+            emoji:faMehBlank,
+            food:faHotdog
+        },
     },
     {
         id:20,
-        color:'1',
+        color:'#795548',
         value:10,
-        icon:'1',
+        icon:{
+            emoji:faMehBlank,
+            food:faHotdog
+        },
     },
     {
         id:21,
-        color:'1',
+        color:'#03a9f4',
         value:11,
-        icon:'1',
+        icon:{
+            emoji:faMehRollingEyes,
+            food:faIceCream
+        },
     },
     {
         id:22,
-        color:'1',
+        color:'#03a9f4',
         value:11,
-        icon:'1',
+        icon:{
+            emoji:faMehRollingEyes,
+            food:faIceCream
+        },
     },
     {
         id:23,
-        color:'1',
+        color:'darksalmon',
         value:12,
-        icon:'1',
+        icon:{
+            emoji:faSadCry,
+            food:faLemon
+        },
     },
     {
         id:24,
-        color:'1',
+        color:'darksalmon',
         value:12,
-        icon:'1',
+        icon:{
+            emoji:faSadCry,
+            food:faLemon
+        },
     },
     {
         id:25,
-        color:'1',
+        color:'tan',
         value:13,
-        icon:'1',
+        icon:{
+            emoji:faTired,
+            food:faPepperHot
+        },
     },
     {
         id:26,
-        color:'1',
+        color:'tan',
         value:13,
-        icon:'1',
+        icon:{
+            emoji:faTired,
+            food:faPepperHot
+        },
     },
     {
         id:27,
-        color:'1',
+        color:'plum',
         value:14,
-        icon:'1',
+        icon:{
+            emoji:faSurprise,
+            food:faPizzaSlice
+        },
     },
     {
         id:28,
-        color:'1',
+        color:'plum',
         value:14,
-        icon:'1',
+        icon:{
+            emoji:faSurprise,
+            food:faPizzaSlice
+        },
     },
     {
         id:29,
-        color:'1',
+        color:'peru',
         value:15,
-        icon:'1',
+        icon:{
+            emoji:faSadTear,
+            food:faStroopwafel
+        },
     },
     {
         id:30,
-        color:'1',
+        color:'peru',
         value:15,
-        icon:'1',
+        icon:{
+            emoji:faSadTear,
+            food:faStroopwafel
+        },
     }
     
 ]
