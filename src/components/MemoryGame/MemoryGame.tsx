@@ -1,23 +1,25 @@
 // @ts-nocheck
-import React,{ useEffect } from 'react';
+import React, {useState} from 'react';
 import Container from '../Container/Container';
 import { Field } from './Field';
-import { GameSettings } from './GameSettings';
-import {TilesData} from './TileData';
+import { TilesData } from './TileData';
+import { DisplayGame } from './DisplayGame';
+
+
+
 
 const MemoryGame:React.FC  = () => {
-    useEffect(() => {
-        console.log('MemoryGame mount')
-    },[]);
-    const shuffledTilesData = TilesData.sort(() => Math.random() - 0.5);
+    const [TileCount, setTileCount] = useState(30);
+    const shuffledTilesData = TilesData.slice(0, TileCount).sort(() => Math.random() - 0.5)
+    
+
     return (
-        
-        <Container BgColor="#bae0dd">
-            <div className="wrapper">
-                <GameSettings></GameSettings>
-                <Field shuffledTilesData ={shuffledTilesData}></Field>
-            </div>   
-        </Container>
+            <Container BgColor="#bae0dd">
+                <div className="wrapper">
+                    <DisplayGame/>
+                    <Field shuffledTilesData ={shuffledTilesData} setTileCount={setTileCount}></Field>
+                </div>   
+            </Container>
     )
 }
 
