@@ -25,7 +25,8 @@ export const Field: React.FC = ({ shuffledTilesData, setTileCount }) => {
         setTileCount(state.height * state.width), [state.height, state.width])
     return (
         <Container height={state.height} width={state.width}>
-            {shuffledTilesData.map((TileData) => <Tile key={TileData.id} color={TileData.color} value={TileData.value} icon={TileData.icon}
+            
+            {shuffledTilesData.map((TileData) => <Tile key={TileData.id} color={TileData.color} value={TileData.value} icon={TileData.icon[state.icon]}
                 clickCounter={clickCounter} setclickCounter={setclickCounter}
             />)}
         </Container>

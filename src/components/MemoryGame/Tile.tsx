@@ -68,7 +68,7 @@ export const Tile:React.FC<PropType>  = ({color, value, icon, clickCounter, setc
         isMatchTile() || isClicked  ? 
         <StyledTile bgrColor={color}>
             <div>
-            <FontAwesomeIcon style={{'position':'initial', 'color':'#e9e9e9'}} size={'3x'} icon={icon.food} />
+            <FontAwesomeIcon style={{'position':'initial', 'color':'#e9e9e9'}} size={'3x'} icon={icon} />
             </div>   
         </StyledTile> :
         <EmptyTile ClickHandler={ ClickHandler } />
