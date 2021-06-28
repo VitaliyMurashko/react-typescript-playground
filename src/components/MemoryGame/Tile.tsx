@@ -38,7 +38,7 @@ export const Tile:React.FC<PropType>  = ({color, value, icon, clickCounter, setc
             setisClicked(false);
             setclickCounter(0);      
         }
-    },[clickCounter]);
+    },[clickCounter, setclickCounter]);
 
     const isMatchTile = () => state.matchTileValue.some((tileValue) => tileValue === value )
 

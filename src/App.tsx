@@ -20,8 +20,8 @@ function App() {
         <Route path='/GitHub-card' render={() => <GitHubCard/>}/>
         <Route path='/Tic-tac-toe' render={() => <TicTacToe/>}/>
         <GameProvider>
-        <Route path='/Memory-game' exact render={() => <MemoryGame/>}/>
-        <Route path='/Memory-game/new-game' exact render={() => <GameSettingsForm/>}/>
+          <Route path='/Memory-game/new-game' render={() => <GameSettingsForm/>}/>  
+          <Route path='/Memory-game' exact component={ MemoryGame }/>
         </GameProvider>
       </Switch>
     </div>

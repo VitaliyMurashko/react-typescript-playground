@@ -26,7 +26,7 @@ const KeyboardBase = () => {
         document.addEventListener('keydown', (e) => {
             setkey(e.key);
             setValue( e.key );
-        })
+        },[setValue])
         return () => {
             document.removeEventListener('keydown', (e) => {
                 setkey(e.key) 

@@ -47,10 +47,6 @@ export const GameSettingsForm: React.FC = () => {
   const { state, dispatch } = useContext(GameContext);
   
 
-  const valuetext = (value) => {
-    return `${value}s`;
-  };
-
   const handleChange = (event) => {
     dispatch({
       type: 'icon',

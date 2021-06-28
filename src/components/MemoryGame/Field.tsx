@@ -19,10 +19,10 @@ padding:0.4vw;
 
 
 export const Field: React.FC = ({ shuffledTilesData, setTileCount }) => {
-    const { state, dispatch } = useContext(GameContext);
+    const { state } = useContext(GameContext);
     const [clickCounter, setclickCounter] = useState(0);
     useEffect(() =>
-        setTileCount(state.height * state.width), [state.height, state.width])
+        setTileCount(state.height * state.width), [state.height, state.width, setTileCount])
     return (
         <Container height={state.height} width={state.width}>
             

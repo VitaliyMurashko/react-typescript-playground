@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars} from '@fortawesome/free-solid-svg-icons'
 
 const Nav = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     return (
         <>
         <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setIsOpen(!isOpen)}/>
