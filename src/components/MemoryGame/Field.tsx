@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useState, useContext, useEffect } from 'react';
 import { Tile } from './Tile';
+import { GameEnd } from './GameEnd';
 import styled from 'styled-components';
 import { GameContext } from './MemoryGameReducer';
 
@@ -19,18 +20,27 @@ padding:0.4vw;
 
 
 export const Field: React.FC = ({ shuffledTilesData, setTileCount }) => {
+    console.log("Field render")
     const { state } = useContext(GameContext);
     const [clickCounter, setclickCounter] = useState(0);
-    useEffect(() =>
-        setTileCount(state.height * state.width), [state.height, state.width, setTileCount])
+    
+    console.log(state)
+    useEffect(() => {
+        setTileCount(state.height * state.width)
+       }
+        , [state.height, state.width, setTileCount])
+        
     return (
-        <Container height={state.height} width={state.width}>
-            
-            {shuffledTilesData.map((TileData) => <Tile key={TileData.id} color={TileData.color} value={TileData.value} icon={TileData.icon[state.icon]}
-                clickCounter={clickCounter} setclickCounter={setclickCounter}
-            />)}
-        </Container>
-
+        <>
+            {state.gameEndStatus ?
+                <GameEnd/>:
+                <Container height={state.height} width={state.width}>
+                {shuffledTilesData.map((TileData) => <Tile key={TileData.id} color={TileData.color} value={TileData.value} icon={TileData.icon[state.icon]}
+                    clickCounter={clickCounter} setclickCounter ={setclickCounter}
+                    />)}
+                </Container>
+            }
+        </>
     )
 }
 

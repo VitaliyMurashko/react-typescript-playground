@@ -9,7 +9,7 @@ import { DisplayGame } from './DisplayGame';
 
 
 const MemoryGame:React.FC  = () => {
-    const [TileCount, setTileCount] = useState(30);
+    const [TileCount, setTileCount] = useState(0);
     const shuffledTilesData = TilesData.slice(0, TileCount).sort(() => Math.random() - 0.5)
     
 

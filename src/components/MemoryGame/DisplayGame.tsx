@@ -25,6 +25,7 @@ const DisplayGameStats = styled.div`
 `
 
 export const DisplayGame = () => {
+    console.log('DisplayGame render')
     return (
         <DisplayGameWrapper>
             <DisplayGameEmpty/>

@@ -5,13 +5,20 @@ import { GameContext } from '../MemoryGameReducer'
 
 
 export const DisplayTimer: React.FC = () => {
-    const { state } = useContext(GameContext);
+    const { state, dispatch} = useContext(GameContext);
     const [timer, settimer] = useState(state.timer);
+    console.log('DisplayTimer render')
     useEffect(() => {
-        let Timer = setTimeout(() => settimer(timer - 1), 1000);
+        if(timer === 0 && !state.gameEndStatus){
+            dispatch({type:"isGameEnd", payload:"you lose..."})
+        }
+        let Timer = timer > 0 && setTimeout(() => settimer(timer - 1), 1000);
+        
        return () => clearTimeout(Timer) 
     }, [timer])
     return (
-    <div><b>Timer: {timer}</b></div>
+        <>
+        {state.gameEndStatus ?  <div><b>Timer: 0</b></div>  : <div><b>Timer: {timer}</b></div>}
+        </>
     )
 }

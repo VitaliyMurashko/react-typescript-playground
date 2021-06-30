@@ -4,11 +4,13 @@ import React, { useReducer } from 'react';
 const initialState = {
   width: '6',
   height: '5',
-  timer: 110,
+  timer: 100,
+  time:0,
   icon:"emoji",
   steps:0,
   match:0,
   ismatch:false,
+  gameEndStatus:"",
   openTileValue:[],
   matchTileValue:[]
 }
@@ -23,6 +25,9 @@ const reducer = (state = initialState, action) => {
     case 'icon': return { ...state, icon:action.payload };
     case 'openTileValue': return { ...state, openTileValue:action.payload };
     case 'matchTileValue': return { ...state, matchTileValue:[...state.matchTileValue, action.payload] };
+    case 'startGame': return {...state, match:0, steps:0, ismatch:false, openTileValue:[], matchTileValue:[], gameEndStatus:"", time:0 };
+    case 'isGameEnd': return {...state, gameEndStatus:action.payload};
+    case 'GameEndStats': return {...state, match:action.match, time:action.time }
     default: throw new Error('Unexpected action');
   }
 };

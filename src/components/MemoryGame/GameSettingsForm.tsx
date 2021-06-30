@@ -46,7 +46,7 @@ const Button = styled(Link)`
 export const GameSettingsForm: React.FC = () => {
   const { state, dispatch } = useContext(GameContext);
   
-
+  console.log('GameSettingsForm render')
   const handleChange = (event) => {
     dispatch({
       type: 'icon',
@@ -99,7 +99,6 @@ export const GameSettingsForm: React.FC = () => {
                 id="height"
                 variant="outlined"
                 label="height (max 5)"
-                defaultValue="5"
                 type="number"
                 onChange={(event) => {
                   if (event.target.value > 5) {
@@ -155,7 +154,7 @@ export const GameSettingsForm: React.FC = () => {
             </FormControl>
           </div>
           <div style={{ padding: '20px 0', textAlign: 'center' }}>
-            <Button to="/Memory-game">Start</Button>
+            <Button to="/Memory-game" onClick={() => { dispatch({type:'startGame'}) }}>Start</Button>
           </div>
         </form>
       </StyledWrapperForm>

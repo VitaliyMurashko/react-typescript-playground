@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, memo } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { flipInY } from 'react-animations';
 import { EmptyTile } from './EmptyTile';
@@ -22,21 +22,26 @@ const StyledTile = styled.div`
 interface PropType {
     color:string,
     value:number,
-    icon:string
+    icon:string,
+    clickCounter:number,
+    setclickCounter: () => void
 }
 
 
 
 
-export const Tile:React.FC<PropType>  = ({color, value, icon, clickCounter, setclickCounter}) => {
+export const Tile:React.FC<PropType>  = memo(({color, value, icon, clickCounter, setclickCounter}) => {
     const [isClicked, setisClicked] = useState(false);
-
+    console.log('Tile render')
     const { state, dispatch } = useContext(GameContext);
     
     useEffect(() => {
         if(clickCounter > 2){
             setisClicked(false);
             setclickCounter(0);      
+        }
+        if(state.matchTileValue.length * 2 + state.openTileValue.length === state.height * state.width){ 
+            dispatch({type:"isGameEnd", payload:"You win"});
         }
     },[clickCounter, setclickCounter]);
 
@@ -73,4 +78,4 @@ export const Tile:React.FC<PropType>  = ({color, value, icon, clickCounter, setc
         </StyledTile> :
         <EmptyTile ClickHandler={ ClickHandler } />
     )
-}
+})
