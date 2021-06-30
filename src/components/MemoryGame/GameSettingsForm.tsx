@@ -28,7 +28,7 @@ const StyledWrapperForm = styled.div`
     color: #757171;
 `
 const Button = styled(Link)`
-    background-color: darkgray;
+    background-color: #4caf50;
     text-decoration: none;
     padding: 10px 30px;
     font-size: 20px;
